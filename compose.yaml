@@ -1,0 +1,17 @@
+services:
+
+  gateway-service:
+    build:
+      context: .
+    container_name: gateway-service
+
+    ports:
+      - "8082:8082"
+
+    networks:
+      - microservices-network
+
+
+networks:
+  microservices-network:
+    external: true
